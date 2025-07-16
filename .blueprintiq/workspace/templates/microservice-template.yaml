@@ -1,0 +1,48 @@
+# Microservice Template
+apiVersion: v1
+kind: Template
+metadata:
+  name: microservice
+  description: Microservice with observability and resilience patterns
+
+spec:
+  type: microservice
+  pattern: microservices
+  
+  components:
+    - name: "{{.ServiceName}}"
+      type: service
+      runtime: "{{.Runtime | default \"go\"}}"
+      
+  patterns:
+    - circuit-breaker
+    - retry
+    - bulkhead
+    - timeout
+    
+  observability:
+    metrics: prometheus
+    tracing: jaeger
+    logging: structured
+    
+  networking:
+    protocol: http
+    port: "{{.Port | default \"8080\"}}"
+    health_check: "/health"
+    readiness_check: "/ready"
+    
+  resilience:
+    circuit_breaker:
+      failure_threshold: 5
+      timeout: 30s
+    retry:
+      max_attempts: 3
+      backoff: exponential
+      
+  security:
+    authentication: jwt
+    authorization: rbac
+    tls: required
+
+generated_by: BluePrintIQ
+template_version: "1.0.0"

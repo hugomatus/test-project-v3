@@ -1,0 +1,34 @@
+# BluePrintIQ Project Configuration
+project:
+  name: test-project-v3
+  description: Test project for BluePrintIQ CLI validation
+  type: architectural-specification
+  version: "0.1.0"
+
+# Architectural metadata
+architecture:
+  patterns: []
+  technologies: []
+  providers: []
+
+# Specification settings
+specifications:
+  format: yaml
+  validation: enabled
+  auto_commit: true
+
+# GitHub integration
+github:
+  auto_issues: true
+  auto_project_board: true
+  labels:
+    - architecture
+    - specification
+    - blueprintiq
+
+# Created by BluePrintIQ
+metadata:
+  created_at: 2025-07-16T09:34:21-07:00
+  created_by: blueprintiq
+  organization_id: blueprint-org-001
+  workspace_id: workspace-001

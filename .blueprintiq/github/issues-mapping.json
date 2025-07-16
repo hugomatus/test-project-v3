@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "mappings": [],
+  "configuration": {
+    "auto_create_issues": true,
+    "issue_templates": {
+      "component": "Component Implementation",
+      "pattern": "Architectural Pattern",
+      "integration": "Service Integration"
+    },
+    "label_mapping": {
+      "components": ["component", "implementation"],
+      "patterns": ["pattern", "architecture"],
+      "integrations": ["integration", "api"]
+    }
+  },
+  "last_updated": ""
+}

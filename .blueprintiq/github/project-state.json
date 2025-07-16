@@ -1,0 +1,23 @@
+{
+  "project_name": "test-project-v3",
+  "github_owner": "hugomatus",
+  "repository_name": "",
+  "integration_status": "initialized",
+  "last_sync": "2025-07-16T09:34:21-07:00",
+  "features": {
+    "issues_enabled": true,
+    "project_board_enabled": true,
+    "actions_enabled": true,
+    "discussions_enabled": false
+  },
+  "sync_state": {
+    "specifications": "synced",
+    "issues": "pending",
+    "project_board": "pending"
+  },
+  "configuration": {
+    "auto_issue_creation": true,
+    "auto_milestone_creation": true,
+    "issue_labels": ["architecture", "specification", "blueprintiq"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "workflows": {
+    "fidelity_validation": {
+      "enabled": true,
+      "trigger": ["push", "pull_request"],
+      "schedule": "0 0 * * *"
+    },
+    "specification_sync": {
+      "enabled": true,
+      "trigger": ["specification_update"]
+    }
+  },
+  "configuration": {
+    "blueprint_iq_version": "latest",
+    "validation_timeout": "10m",
+    "notification_channels": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "session_id": "session-001",
+  "project_id": "",
+  "status": "active",
+  "started_at": "2025-07-16T09:34:21-07:00",
+  "user_id": "system",
+  "context": {
+    "project_phase": "initialization",
+    "current_focus": "project_setup",
+    "architectural_intent": "Simple web application with frontend and backend services"
+  },
+  "conversation_turns": [],
+  "last_activity": "2025-07-16T09:34:21-07:00"
+}

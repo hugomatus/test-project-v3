@@ -1,0 +1,36 @@
+# API Service Template
+apiVersion: v1
+kind: Template
+metadata:
+  name: api-service
+  description: RESTful API service template
+
+spec:
+  type: api
+  pattern: rest-api
+  
+  components:
+    - name: "{{.ServiceName}}"
+      type: service
+      runtime: "{{.Runtime | default \"node\"}}"
+      
+  endpoints:
+    - path: "/health"
+      method: GET
+      description: Health check endpoint
+      
+    - path: "/api/v1/{{.ResourceName}}"
+      method: GET
+      description: List {{.ResourceName}} resources
+      
+  configuration:
+    port: "{{.Port | default \"3000\"}}"
+    environment: "{{.Environment | default \"development\"}}"
+    
+  dependencies:
+    - database
+    - logging
+    - monitoring
+
+generated_by: BluePrintIQ
+template_version: "1.0.0"
